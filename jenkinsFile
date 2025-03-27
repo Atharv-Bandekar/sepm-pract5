@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'javac AverageCalculator.java'     //for window based execution bat and linux based sh
+                sh 'javac AverageCalculator.java'     //for window based execution bat and linux based sh
 		
             }
         }
         stage('Run') {
             steps {
-                bat 'java AverageCalculator'
+                sh 'java AverageCalculator'
             } 
         }
     }
